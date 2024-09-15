@@ -1,6 +1,5 @@
 import { Button } from "@mui/material";
 import bannerVideo from "../assets/banner-video.mp4";
-import { useEffect, useRef } from "react";
 
 function HeroSection() {
 
@@ -11,18 +10,18 @@ function HeroSection() {
     >
       {/* Background video */}
       <video
-        className="absolute left-0 top-0 h-full w-full object-cover z-20"
+        className="absolute left-0 top-0 h-full w-full object-cover"
         src={bannerVideo}
         autoPlay
         loop
         muted
         playsInline
-        preload="metadata"
+        preload="auto"
       ></video>
 
       {/* Overlay content */}
       <div className="container relative z-10 mx-auto px-6 text-center">
-        <h2 className="text-2xl md:text-4xl font-semibold uppercase text-white drop-shadow-lg">
+        <h2 className="text-2xl md:text-4xl uppercase text-white drop-shadow-lg">
           Your Vision, Our Design
         </h2>
         <Button
@@ -35,7 +34,7 @@ function HeroSection() {
       </div>
 
       {/* Optional dark overlay to improve text readability */}
-      <div className="absolute left-0 top-0 z-0 h-full w-full bg-[#A6A5A1] opacity-30"></div>
+      <div className="absolute left-0 top-0 z-0 h-full w-full bg-[#A6A5A1] opacity-40"></div>
     </section>
   );
 }

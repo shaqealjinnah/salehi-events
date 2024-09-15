@@ -57,7 +57,7 @@ function Services() {
   return (
     <section id="services" className="bg-gray-100 py-20">
       <div className="container mx-auto px-6">
-        <h2 className="text-3xl font-semibold text-center text-gray-800">
+        <h2 className="text-3xl  text-center text-gray-800">
           Our Work
         </h2>
         <div className="mt-10 lg:max-w-[700px] xl:max-w-[1050px] mx-auto">

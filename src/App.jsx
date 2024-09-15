@@ -35,7 +35,7 @@ function App() {
         {/* Contact Section */}
         <section id="contact" className="py-20">
           <div className="container mx-auto px-6">
-            <h2 className="text-3xl font-semibold text-center text-gray-800">
+            <h2 className="text-3xl text-center text-gray-800">
               Contact Us
             </h2>
             <p className="mt-4 text-center text-gray-600">
@@ -64,7 +64,7 @@ function App() {
                     placeholder="Your Message"
                   ></textarea>
                 </div>
-                <button className="w-full px-4 py-2 bg-blue-500 text-white font-semibold rounded hover:bg-blue-600">
+                <button className="w-full px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
                   Send Message
                 </button>
               </form>
