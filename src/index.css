@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Gilda+Display&display=swap');
+
+@import 'slick-carousel/slick/slick.css';
+@import 'slick-carousel/slick/slick-theme.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        scroll-behavior: smooth;
+    }
+    body {
+        @apply font-sans
+    }
+}
+
+@layer components {
+    .bannerHeightSM {
+        height: calc(100vh - 56px);
+    }
+    .bannerHeightMD {
+        height: calc(100vh - 64px);
+    }
+}
