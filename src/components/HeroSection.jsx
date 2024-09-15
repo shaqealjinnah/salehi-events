@@ -3,22 +3,6 @@ import bannerVideo from "../assets/banner-video.mp4";
 import { useEffect, useRef } from "react";
 
 function HeroSection() {
-  const videoRef = useRef(null);
-
-  useEffect(() => {
-  const videoElement = videoRef.current;
-  if (videoElement) {
-  const playPromise = videoElement.play();
-
-  if (playPromise !== undefined) {
-    playPromise.catch(() => {
-      // Autoplay failed, likely due to Low Power Mode or other restrictions
-      alert("To view this video, please disable Low Power Mode or tap to play.");
-    });
-  }
-  }
-}, []);
-
 
   return (
     <section
@@ -27,8 +11,7 @@ function HeroSection() {
     >
       {/* Background video */}
       <video
-      ref={videoRef}
-        className="absolute left-0 top-0 h-full w-full object-cover"
+        className="absolute left-0 top-0 h-full w-full object-cover z-20"
         src={bannerVideo}
         autoPlay
         loop
