@@ -1,20 +1,40 @@
 import { Button } from "@mui/material";
 import bannerVideo from "../assets/banner-video.mp4";
+import { useEffect, useRef } from "react";
 
 function HeroSection() {
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+  const videoElement = videoRef.current;
+  if (videoElement) {
+  const playPromise = videoElement.play();
+
+  if (playPromise !== undefined) {
+    playPromise.catch(() => {
+      // Autoplay failed, likely due to Low Power Mode or other restrictions
+      alert("To view this video, please disable Low Power Mode or tap to play.");
+    });
+  }
+  }
+}, []);
+
+
   return (
     <section
       id="home"
-      className="relative flex h-screen items-center justify-center bg-blue-500 text-white"
+      className="relative flex h-screen items-center justify-center text-white"
     >
       {/* Background video */}
       <video
+      ref={videoRef}
         className="absolute left-0 top-0 h-full w-full object-cover"
         src={bannerVideo}
         autoPlay
         loop
         muted
         playsInline
+        preload="metadata"
       ></video>
 
       {/* Overlay content */}
