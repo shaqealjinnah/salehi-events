@@ -17,10 +17,16 @@
 }
 
 @layer components {
-    .bannerHeightSM {
-        height: calc(100vh - 56px);
+    .dot::after {
+        content: "";
+        background-color: #99a1aa;
+        border-radius: 50%;
+        height: 4px;
+        width: 4px;
+        position: absolute;
+        top: 40%;
+        right: -1px;
+        transform: translateY(-40%);
     }
-    .bannerHeightMD {
-        height: calc(100vh - 64px);
-    }
+
 }

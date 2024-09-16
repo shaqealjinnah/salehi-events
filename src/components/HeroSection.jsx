@@ -26,7 +26,7 @@ function HeroSection() {
         </h2>
         <Button
           href="#about"
-          className="!rounded-none font-semibold !shadow-2xl duration-300 hover:bg-[#000] hover:text-white"
+          className="!hidden md:!inline-flex !rounded-none font-semibold !shadow-2xl duration-300 hover:bg-[#000] hover:text-white"
           sx={{ mt: 5, px: 4, py: 1.5, color: "#000", bgcolor: "#bfbebb" }}
         >
           Let's Transfrom Your Event
