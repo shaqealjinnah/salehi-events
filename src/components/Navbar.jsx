@@ -51,6 +51,9 @@ const Navbar = () => {
           <a href="#" className="text-black font-medium">
             Home
           </a>
+          <a href="#services" className="text-black font-medium">
+            Services
+          </a>
           <a href="#about" className="text-black font-medium">
             About
           </a>
@@ -80,6 +83,13 @@ const Navbar = () => {
             href="#"
           >
             Home
+          </Button>
+          <Button
+            onClick={handleDrawerClose}
+            className="!text-black !text-xl h-20 w-full"
+            href="#services"
+          >
+            Services
           </Button>
           <Button
             onClick={handleDrawerClose}
